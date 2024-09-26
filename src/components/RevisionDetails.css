@@ -1,0 +1,79 @@
+/* RevisionDetails.css */
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+h2 {
+  text-align: center;
+  color: #343a40;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Details Section */
+.details-section {
+  margin-bottom: 20px;
+}
+
+.details-section p {
+  font-size: 1rem;
+  color: #495057;
+  margin-bottom: 10px;
+}
+
+.details-section strong {
+  color: #007bff;
+}
+
+/* Button */
+.pdf-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  margin-top: 20px;
+}
+
+.pdf-button:hover {
+  background-color: #0056b3;
+}
+
+.pdf-button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+.pdf-button:active {
+  background-color: #004085;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .pdf-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+}

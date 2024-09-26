@@ -1,38 +1,41 @@
-.App {
-  text-align: center;
+/* Styles pour la barre de navigation */
+.navbar-custom {
+  background-color: transparent; /* Couleur de fond */
+  padding: 20px; /* Espacement autour des éléments */
+  border-radius: 5px; /* Coins arrondis */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  width: 94.33%; /* Largeur de la barre de navigation */
+  display: flex; /* Utilisation du flexbox */
+  justify-content: space-around; /* Espacement égal entre les éléments */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar-custom .nav {
+  display: flex; /* Aligner les éléments de la liste sur une ligne */
+  list-style-type: none; /* Enlever les puces de liste */
+  padding-left: 0; /* Enlever le padding par défaut */
+  margin: 0; /* Supprimer le margin */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-custom .nav-item {
+  margin-bottom: 0; /* Enlever l'espacement entre les éléments */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar-custom .nav-link {
+  color: #0a456f; /* Couleur du texte */
+  font-size: 16px; /* Taille de la police */
+  font-weight: bold; /* Poids de la police */
+  padding: 10px 15px; /* Espacement autour du texte */
+  border-radius: 5px; /* Coins arrondis des liens */
+  display: inline-block; /* Afficher les liens en ligne */
+  text-decoration: none; /* Supprimer la sous-ligne */
+  transition: background-color 0.3s; /* Effet de transition pour le survol */
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-custom .nav-link:hover {
+  background-color: #d0d8e1; /* Couleur de fond lors du survol */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-custom .nav-link.active {
+  background-color: #007bff; /* Couleur de fond pour l'élément actif */
+  color: #ffffff; /* Couleur du texte actif */
 }

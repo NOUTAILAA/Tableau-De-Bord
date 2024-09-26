@@ -1,0 +1,170 @@
+/* RevisionList.css */
+
+/* Style de la conteneur principale */
+.container {
+  background-color: #e8f0fe; /* Couleur d'arrière-plan plus douce */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Ombre plus profonde */
+  max-width: 1200px;
+  margin: 0 auto; /* Centrer la page */
+}
+
+/* Style du titre */
+h2 {
+  color: #2c3e50; /* Couleur du texte */
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/* Style du tableau */
+.table {
+  margin-top: 20px;
+  border-collapse: separate;
+  border-spacing: 0 10px; /* Espacement entre les lignes */
+}
+
+/* Style des en-têtes */
+.table thead {
+  background-color: #34495e; /* Couleur d'arrière-plan de l'en-tête */
+  color: white;
+}
+
+.table thead th {
+  border: none; /* Retirer les bordures */
+  padding: 15px; /* Plus de padding pour une meilleure lisibilité */
+  text-align: center; /* Centrer le texte */
+}
+
+/* Style des cellules */
+.table tbody td {
+  background-color: white;
+  padding: 15px;
+  border: none;
+  text-align: center; /* Centrer le texte */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour les cellules */
+}
+
+/* Style des lignes */
+.table tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+/* Survol des lignes */
+.table tbody tr:hover {
+  background-color: #dfe6e9; /* Couleur au survol */
+}
+
+/* Style des icônes SVG */
+.action-icons svg {
+  width: 24px;
+  height: 24px;
+  color: #3498db; /* Couleur principale des icônes */
+  transition: transform 0.3s ease, color 0.3s ease; /* Effet de transition */
+}
+
+/* Effet de survol pour les icônes SVG */
+.action-icons svg:hover {
+  transform: scale(1.2); /* Agrandir au survol */
+  color: #2c3e50; /* Changement de couleur au survol */
+}
+
+/* Adaptation pour mobile */
+@media (max-width: 768px) {
+  .table thead {
+    display: none; /* Masquer l'en-tête sur mobile */
+  }
+
+  .table tbody td {
+    display: block;
+    text-align: right;
+    position: relative;
+  }
+
+  .table tbody td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .table tbody tr {
+    margin-bottom: 15px;
+  }
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  list-style-type: none; /* Enlève les points */
+  padding: 0; /* Enlève les marges internes */
+}
+
+.pagination .page-item {
+  margin: 0 5px;
+}
+
+.pagination .page-link {
+  color: #007bff;
+  border: 1px solid #ddd;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination .page-link:hover {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.pagination .page-link:focus {
+  box-shadow: none;
+}
+
+/* Style pour les boutons Previous et Next */
+.pagination .page-link-prev-next {
+  font-weight: bold;
+}
+
+.pagination .page-link-prev-next:hover {
+  background-color: #0056b3;
+  color: white;
+}
+/* Style du conteneur de recherche */
+.search-container {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Style du label de recherche */
+.search-label {
+  font-size: 1rem;
+  margin-right: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Style du champ de recherche */
+.search-input {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 250px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* Style du champ de recherche au focus */
+.search-input:focus {
+  border-color: #007bff;
+}
